@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Dados
+data/
+
+# GCP
+**/application_default_credentials.json
+
+# OS
+.DS_Store
+Thumbs.db

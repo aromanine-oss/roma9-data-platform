@@ -26,3 +26,55 @@ Este repositório é a espinha dorsal da minha plataforma pessoal de dados — d
 - dbt (transformações e documentação)
 - Python (ETL, NLP, NSA)
 - Looker Studio / Power BI (dashboards)
+
+```
+roma9-data-platform
+├─ analytics
+│  ├─ experiments
+│  ├─ music
+│  ├─ nlp
+│  ├─ nsa
+│  └─ politics
+│     └─ party-territorialization
+│        └─ README.md
+├─ data-lake
+│  ├─ bronze
+│  ├─ gold
+│  ├─ raw
+│  │  └─ README.md
+│  └─ silver
+├─ dbt
+│  ├─ analyses
+│  ├─ dbt_project.yml
+│  ├─ logs
+│  ├─ macros
+│  ├─ models
+│  │  ├─ common
+│  │  ├─ marts
+│  │  │  ├─ core
+│  │  │  ├─ music
+│  │  │  ├─ nlp
+│  │  │  ├─ nsa
+│  │  │  └─ politics
+│  │  └─ staging
+│  │     └─ stg__healthcheck.sql
+│  ├─ README.md
+│  ├─ seeds
+│  ├─ snapshots
+│  └─ tests
+├─ LICENSE
+├─ logs
+├─ notebooks
+│  ├─ nlp
+│  └─ nsa
+├─ README.md
+└─ scripts
+   ├─ ingestion
+   │  └─ politics
+   │     └─ territorialization
+   │        ├─ infer_schema_tse.py
+   │        └─ load_tse_votacao_nominal.py
+   ├─ transform
+   └─ utils
+
+```

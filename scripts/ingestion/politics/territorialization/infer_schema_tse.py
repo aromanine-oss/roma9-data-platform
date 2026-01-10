@@ -7,7 +7,7 @@ from collections import defaultdict
 # Paths (robusto para VS Code aberto em scripts/ingestion)
 # --------------------------------------------------
 
-BASE_DIR = Path(__file__).resolve().parents[2]
+BASE_DIR = Path(__file__).resolve().parents[4]
 DATA_DIR = BASE_DIR / "data" / "tse" / "votacao_nominal_municipio_zona"
 
 if not DATA_DIR.exists():

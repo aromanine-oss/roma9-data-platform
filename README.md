@@ -1,4 +1,4 @@
-# roma9-data-plattorm
+# roma9-data-platform
 Personal data platform for lifelong analytics: pipelines, dbt models, NSA, NLP, LLM, dashboards and experimentation.
 Este repositório é a espinha dorsal da minha plataforma pessoal de dados — desde pipelines, modelagem com dbt, análises sociais (NSA), processamento de linguagem natural (NLP), até dashboards e experimentos.
 
@@ -26,6 +26,7 @@ Este repositório é a espinha dorsal da minha plataforma pessoal de dados — d
 - dbt (transformações e documentação)
 - Python (ETL, NLP, NSA)
 - Looker Studio / Power BI (dashboards)
+
 
 ```
 roma9-data-platform
@@ -70,10 +71,13 @@ roma9-data-platform
 ├─ README.md
 └─ scripts
    ├─ ingestion
-   │  └─ politics
-   │     └─ territorialization
-   │        ├─ infer_schema_tse.py
-   │        └─ load_tse_votacao_nominal.py
+   │  ├─ politics
+   │  │  └─ territorialization
+   │  │     ├─ infer_schema_tse.py
+   │  │     ├─ load_tse_votacao_nominal.py
+   │  │     ├─ load_tse_votacao_nominal_bq.py
+   │  │     └─ schema_tse_votacao_nominal.json
+   │  └─ README.md
    ├─ transform
    └─ utils
 

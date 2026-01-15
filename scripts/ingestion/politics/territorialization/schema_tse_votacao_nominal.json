@@ -1,0 +1,61 @@
+[
+  { "name": "DT_GERACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "HH_GERACAO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "ANO_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_TIPO_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_TIPO_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NR_TURNO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DT_ELEICAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "TP_ABRANGENCIA", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "SG_UF", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "SG_UE", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_UE", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_MUNICIPIO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_MUNICIPIO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NR_ZONA", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "CD_CARGO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_CARGO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "SQ_CANDIDATO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NR_CANDIDATO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_CANDIDATO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_URNA_CANDIDATO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_SOCIAL_CANDIDATO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "CD_SITUACAO_CANDIDATURA", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_SITUACAO_CANDIDATURA", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_DETALHE_SITUACAO_CAND", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_DETALHE_SITUACAO_CAND", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_SITUACAO_JULGAMENTO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_SITUACAO_JULGAMENTO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_SITUACAO_CASSACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_SITUACAO_CASSACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_SITUACAO_DCONST_DIPLOMA", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_SITUACAO_DCONST_DIPLOMA", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "TP_AGREMIACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NR_PARTIDO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "SG_PARTIDO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_PARTIDO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "NR_FEDERACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_FEDERACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "SG_FEDERACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_COMPOSICAO_FEDERACAO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "SQ_COLIGACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_COLIGACAO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_COMPOSICAO_COLIGACAO", "type": "STRING", "mode": "NULLABLE" },
+
+  { "name": "ST_VOTO_EM_TRANSITO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "QT_VOTOS_NOMINAIS", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "NM_TIPO_DESTINACAO_VOTOS", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "QT_VOTOS_NOMINAIS_VALIDOS", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "CD_SIT_TOT_TURNO", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "DS_SIT_TOT_TURNO", "type": "STRING", "mode": "NULLABLE" }
+]

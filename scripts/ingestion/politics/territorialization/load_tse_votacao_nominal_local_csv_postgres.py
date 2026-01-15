@@ -1,6 +1,11 @@
 from pathlib import Path
 import psycopg2
 import re
+import chardet  
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ==================================================
 # CONFIG
@@ -12,11 +17,11 @@ BASE_DIR = Path(__file__).resolve().parents[4]
 DATA_DIR = BASE_DIR / "data" / "tse" / "votacao_nominal_municipio_zona"
 
 PG_CONN = {
-    "host": "localhost",
-    "dbname": "roma9_db",
-    "user": "postgres",
-    "password": "REMOVIDO",
-    "port": 5432,
+    "host": os.getenv("DB_HOST"),
+    "dbname": os.getenv("DB_NAME"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASS"),
+    "port": int(os.getenv("DB_PORT", 5432)),
 }
 
 PG_SCHEMA = "staging"
@@ -26,13 +31,21 @@ TABLE_PREFIX = "tse_votacao_nominal_municipio_zona"
 # FUNÇÕES
 # ==================================================
 
+#Detecta a codificação do arquivo CSV
+def detect_encoding(csv_path: Path) -> str:
+    with csv_path.open("rb") as f:
+        raw = f.read(10000)
+    enc = chardet.detect(raw)["encoding"]
+    return enc.upper() if enc else "UTF8"
+
+#Extrai o ano do nome do arquivo
 def extract_year(file_name: str) -> str:
     match = re.search(r'_(\d{4})_', file_name)
     if not match:
         raise ValueError(f"Ano não encontrado no nome do arquivo: {file_name}")
     return match.group(1)
 
-
+#Lê o cabeçalho do CSV e retorna a lista de colunas
 def read_header(csv_path: Path):
     with csv_path.open("r", encoding="latin1") as f:
         raw_header = f.readline().strip()
@@ -55,7 +68,7 @@ def read_header(csv_path: Path):
 
     return columns
 
-
+#Gera o SQL de criação da tabela
 def create_table_sql(table_name: str, columns: list[str]) -> str:
     cols_sql = ",\n    ".join(f'"{c}" TEXT' for c in columns)
 
@@ -65,7 +78,7 @@ def create_table_sql(table_name: str, columns: list[str]) -> str:
     );
     """
 
-
+#Carrega o CSV na tabela usando COPY
 def load_csv(cursor, csv_path: Path, table_name: str):
     with csv_path.open("r", encoding="latin1") as f:
         cursor.copy_expert(

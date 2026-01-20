@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: tse
+    database: roma9-data-platform
+    schema: roma9_raw
+    tables:
+      - name: tse_votacao_nominal_municipio_zona
+        description: "Votação nominal por candidato, município e zona (TSE)"

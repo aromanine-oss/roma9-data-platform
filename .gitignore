@@ -216,3 +216,8 @@ data/
 # OS
 .DS_Store
 Thumbs.db.env 
+
+# dbt artifacts
+dbt/dbt_packages/
+dbt/logs/
+dbt/target/

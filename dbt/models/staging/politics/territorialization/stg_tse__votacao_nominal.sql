@@ -15,7 +15,7 @@ renamed as (
         SAFE_CAST(CD_MUNICIPIO AS INT64)             	AS municipality_id,
         NM_MUNICIPIO              						AS municipality_name,
 		SAFE_CAST(NR_ZONA AS INT64)                     AS zone_number,
-        SAFE_CAST(SQ_CANDODATO AS INT64)                AS candidate_id,
+        SAFE_CAST(SQ_CANDIDATO AS INT64)                AS candidate_id,
         SAFE_CAST(NR_CANDIDATO AS INT64)                AS candidate_nr, 
         NM_CANDIDATO              					    AS candidate_name,
         NM_SOCIAL_CANDIDATO							    AS candidate_social_name,

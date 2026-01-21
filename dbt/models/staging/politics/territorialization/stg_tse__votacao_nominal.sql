@@ -19,6 +19,7 @@ renamed as (
         SAFE_CAST(NR_CANDIDATO AS INT64)                AS candidate_nr, 
         NM_CANDIDATO              					    AS candidate_name,
         NM_SOCIAL_CANDIDATO							    AS candidate_social_name,
+        COALESCE(NM_URNA_CANDIDATO, 'Não informado')    AS candidate_ballot_name,
 		SAFE_CAST(QT_VOTOS_NOMINAIS AS INT64) 		    AS qty_votes,
 		SAFE_CAST(QT_VOTOS_NOMINAIS_VALIDOS AS INT64)   AS qty_valid_votes,
 	    SG_UF								            AS state_abbreviation,

@@ -34,10 +34,15 @@ models:
         description: "Quantidade de votos nominais"
         tests:
           - not_null
-          - dbt_utils.expression_is_true:
-              expression: "qty_votes >= 0"
+          - dbt_utils.accepted_range:
+              min_value: 0
 
       - name: state_abbreviation
         description: "Sigla da UF"
+        tests:
+          - not_null
+
+      - name: candidate_ballot_name
+        description: "Nome do candidato como aparece na urna"
         tests:
           - not_null

@@ -221,3 +221,7 @@ Thumbs.db.env
 dbt/dbt_packages/
 dbt/logs/
 dbt/target/
+
+
+# Local DBA / misc toolbox
+scripts/misc/

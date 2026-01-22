@@ -1,5 +1,8 @@
 # roma9-data-platform
 
+🇧🇷 Read in Portuguese: [README.pt-br.md](README.pt-br.md)
+
+
 Personal data platform for lifelong analytics: pipelines, dbt models, NSA/SNA, NLP, LLMs, dashboards, and experimentation.
 
 This repository is the backbone of my personal data platform, bringing together data ingestion pipelines, analytical modeling with dbt, social and social network analysis (NSA/SNA), natural language processing (NLP), dashboards, and exploratory experiments.

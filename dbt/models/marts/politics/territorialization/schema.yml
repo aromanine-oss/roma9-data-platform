@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dim_territory
+    description: Territory dimension at zone level.
+
+    columns:
+      - name: territory_sk
+        tests:
+          - not_null
+          - unique
+
+      - name: state_abbreviation
+        tests:
+          - not_null
+
+      - name: municipality_id
+        tests:
+          - not_null
+
+      - name: zone_number
+        tests:
+          - not_null
+
+  - name: fct_votacao_nominal
+    description: Fact table for nominal votes by candidate and zone.
+
+    columns:
+      - name: territory_sk
+        tests:
+          - not_null
+
+      - name: candidate_sk
+        tests:
+          - not_null
+
+      - name: party_sk
+        tests:
+          - not_null
+
+      - name: office_sk
+        tests:
+          - not_null
+
+      - name: election_sk
+        tests:
+          - not_null
+
+      - name: qty_votes
+        tests:
+          - not_null

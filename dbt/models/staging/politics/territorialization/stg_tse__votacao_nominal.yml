@@ -46,3 +46,15 @@ models:
         description: "Nome do candidato como aparece na urna"
         tests:
           - not_null
+      - name: election_round
+        description: "Número do turno da eleição"
+        tests:
+          - not_null
+      - name: office_id
+        description: "Identificador do cargo (CD_CARGO)"
+        tests:
+          - not_null
+      - name: office_name
+        description: "Descrição do cargo (DS_CARGO)"
+        tests:
+          - not_null

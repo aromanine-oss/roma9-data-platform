@@ -1,36 +1,43 @@
+
+---
+
+## 📄 `README.pt-br.md` (Português)
+
+```md
 # roma9-data-platform
 
-Personal data platform for lifelong analytics: pipelines, dbt models, NSA/SNA, NLP, LLMs, dashboards, and experimentation.
+Plataforma pessoal de dados para análises de longo prazo: pipelines, modelos dbt, NSA/SNA, NLP, LLMs, dashboards e experimentação.
 
-This repository is the backbone of my personal data platform, bringing together data ingestion pipelines, analytical modeling with dbt, social and social network analysis (NSA/SNA), natural language processing (NLP), dashboards, and exploratory experiments.
+Este repositório é a espinha dorsal da minha plataforma pessoal de dados, reunindo pipelines de ingestão, modelagem analítica com dbt, análises sociais e de redes sociais (NSA/SNA), processamento de linguagem natural (NLP), dashboards e experimentos exploratórios.
 
-## Main structure
+## Estrutura principal
 
-- **data-lake/** – raw, refined, and curated data (raw → bronze → silver → gold)
-- **dbt/** – dbt models for transformations and semantic data warehouse
-- **analytics/** – domain-oriented analytical projects
-- **notebooks/** – exploratory notebooks (NSA, NLP, experiments)
-- **scripts/** – ingestion, transformation, and utility scripts
+- **data-lake/** – dados brutos, refinados e curados (raw → bronze → silver → gold)
+- **dbt/** – modelos dbt para transformações e data warehouse semântico
+- **analytics/** – análises organizadas por domínio
+- **notebooks/** – notebooks exploratórios (NSA, NLP, experimentos)
+- **scripts/** – scripts de ingestão, transformação e utilitários
 
-## Goals
+## Objetivos
 
-1. Build a scalable, versioned, and low-cost **data lake**
-2. Create reliable **pipelines and analytical transformations** with dbt
-3. Perform **social network analysis (NSA/SNA)** on voting data and political patterns
-4. Apply **NLP** to political speeches and other textual data
-5. Explore **LLMs** in analytical and experimental contexts
-6. Visualize results through **dashboards**
-7. Maintain a long-term **data laboratory** for future projects and research
+1. Construir um **data lake** escalável, versionado e de baixo custo  
+2. Criar **pipelines e transformações analíticas** com dbt  
+3. Realizar **análises de redes sociais (NSA/SNA)** sobre votações e padrões políticos  
+4. Aplicar **NLP** em discursos políticos e outros textos  
+5. Explorar **LLMs** em contextos analíticos e experimentais  
+6. Visualizar resultados por meio de **dashboards**  
+7. Manter um **laboratório de dados** de longo prazo para projetos futuros  
 
-## Technologies
+## Tecnologias
 
-- Git + GitHub (version control and governance)
+- Git + GitHub (versionamento e governança)
 - Google Cloud Platform (Cloud Storage, BigQuery)
-- dbt (transformations, tests, and documentation)
+- dbt (transformações, testes e documentação)
 - Python (ETL, NLP, NSA/SNA)
-- Looker Studio / Power BI (dashboards and visualization)
+- Looker Studio / Power BI (visualização e dashboards)
 
-## Repository structure
+## Estrutura do repositório
+
 ```
 roma9-data-platform
 ├─ analytics

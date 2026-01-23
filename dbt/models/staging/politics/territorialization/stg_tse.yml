@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_tse__partido
+    description: Staging dos partidos políticos do TSE
+    columns:
+      - name: election_year
+        tests: [not_null]
+
+      - name: party_id
+        tests: [not_null]
+
+  - name: stg_tse__candidato
+    description: Staging dos candidatos do TSE
+    columns:
+      - name: election_year
+        tests: [not_null]
+
+      - name: candidate_id
+        tests: [not_null]
+
+      - name: party_id
+        description: Partido ao qual o candidato estava filiado na eleição
+        tests: [not_null]

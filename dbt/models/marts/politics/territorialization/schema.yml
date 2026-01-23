@@ -49,3 +49,47 @@ models:
       - name: qty_votes
         tests:
           - not_null
+
+  - name: dim_party
+    description: >
+      Dimensão de partidos políticos (TSE),
+      modelada como Slowly Changing Dimension Type 2,
+      ancorada em election_year.
+
+    columns:
+      - name: party_sk
+        description: Surrogate key da dimensão
+        tests:
+          - unique
+          - not_null
+
+      - name: party_id
+        description: Identificador natural do partido no TSE
+        tests:
+          - not_null
+
+      - name: election_year
+        description: Ano da eleição (âncora temporal da SCD)
+        tests:
+          - not_null
+
+      - name: party_number
+        description: Número oficial do partido
+
+      - name: party_name
+        description: Nome completo do partido
+
+      - name: party_abbreviation
+        description: Sigla do partido
+
+      - name: party_status
+        description: Situação do partido no ano eleitoral
+
+      - name: valid_from
+        description: Ano inicial de validade da versão
+
+      - name: valid_to
+        description: Ano final de validade da versão
+
+      - name: is_current
+        description: Indica se é a versão mais recente do partido

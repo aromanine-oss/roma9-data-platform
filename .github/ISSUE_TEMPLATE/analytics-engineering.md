@@ -4,7 +4,7 @@ name: Analytics Engineering Issue
 
 about: Template for issues creation (modeling/dbt)
 
-title: "\[DIM] "
+title: "[DIM] "
 
 labels: analytics, dbt
 

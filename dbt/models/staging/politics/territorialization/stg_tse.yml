@@ -22,3 +22,16 @@ models:
       - name: party_id
         description: Partido ao qual o candidato estava filiado na eleição
         tests: [not_null]
+
+  - name: stg_tse__coalizao
+    description: Staging das coalizações/federações do TSE
+    columns:
+      - name: election_year
+        tests: [not_null]
+
+      - name: election_cod
+        tests: [not_null]
+
+      - name: state_abbreviation
+        description: Partido ao qual o candidato estava filiado na eleição
+        tests: [not_null]

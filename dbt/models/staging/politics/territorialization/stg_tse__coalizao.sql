@@ -40,7 +40,7 @@ renamed as (
         SAFE_CAST(NULLIF(NR_FEDERACAO, '-1') AS INT64)  AS federation_id,
 				
 		NULLIF(NM_FEDERACAO, '#NULO#')                AS federation_name,
-		NULLIF(SG_FEDERACAO, '#NULO#')				  AS federation_acr,
+		NULLIF(SG_FEDERACAO, '#NULO#')					  AS federation_acr,
 		NULLIF(DS_COMPOSICAO_FEDERACAO, '#NULO#')     AS federation_decomp,
 						       
         current_timestamp()               			  AS ingested_at
@@ -48,5 +48,5 @@ renamed as (
 
 )
 
-select *
+select distinct *  -- to avoid duplicates
 from renamed

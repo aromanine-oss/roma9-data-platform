@@ -93,3 +93,55 @@ models:
 
       - name: is_current
         description: Indica se é a versão mais recente do partido
+
+  - name: dim_coalition
+    description: >
+      Dimension representing electoral coalitions and federations.
+      One record represents a unique coalition identity by election year,
+      state and coalition name. Party-level relationships are handled
+      through bridge tables.
+
+    columns:
+      - name: coalition_sk
+        description: Surrogate key of the coalition dimension
+        tests:
+          - not_null
+          - unique
+
+      - name: coalition_nk
+        description: Natural key derived from election year, state, coalition type and name
+        tests:
+          - not_null
+
+      - name: coalition_id
+        description: >
+          Source identifier from TSE (sq_coligacao). Kept for lineage and debugging
+          purposes only. Does not define analytical identity.
+
+      - name: coalition_name
+        description: Official coalition or federation name
+        tests:
+          - not_null
+
+      - name: coalition_type
+        description: Type of political aggregation
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Coligação', 'Partido Isolado', 'FEDERAÇÃO']
+
+      - name: election_year
+        description: Election year in which the coalition is valid
+        tests:
+          - not_null
+
+      - name: state_abbreviation
+        description: State (UF) where the coalition applies
+        tests:
+          - not_null
+
+      - name: created_at
+        description: Timestamp when the record was created
+
+      - name: updated_at
+        description: Timestamp when the record was last updated

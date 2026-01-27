@@ -145,3 +145,73 @@ models:
 
       - name: updated_at
         description: Timestamp when the record was last updated
+
+  - name: dim_party_coalition
+    description: >
+      Dimensão que representa a relação entre partidos e coalizões eleitorais,
+      contextualizada por eleição, turno e UF.
+      Cada linha representa um partido participante de uma coalizão
+      (ou partido isolado) em um determinado turno eleitoral.
+
+    columns:
+
+      - name: coalizao_partido_sk
+        description: Surrogate key da dimensão.
+        tests:
+          - not_null
+          - unique
+
+      - name: election_year
+        description: Ano da eleição.
+        tests:
+          - not_null
+
+      - name: election_round
+        description: Turno da eleição.
+        tests:
+          - not_null
+          
+      - name: state_abbreviation
+        description: Sigla da UF.
+        tests:
+          - not_null
+
+      - name: party_id
+        description: Código do partido político no TSE.
+        tests:
+          - not_null
+
+      - name: coalition_id
+        description: Identificador técnico da coalizão no TSE.
+        tests:
+          - not_null
+
+      - name: coalition_type
+        description: Tipo da agremiação eleitoral.
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - Coligação
+                - Partido Isolado
+                - Federação
+
+
+      - name: federation_id
+        description: Identificador da federação, quando aplicável.
+
+      - name: federation_name
+        description: Nome da federação, quando aplicável.
+
+    tests:
+
+      - dbt_utils.unique_combination_of_columns:
+          name: uq_dim_coalizao_partido_grain
+          combination_of_columns:
+            - election_year
+            - election_round
+            - state_abbreviation
+            - coalition_id
+            - party_id
+            - coalition_name
+            - coalition_decomp

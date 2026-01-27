@@ -215,3 +215,14 @@ models:
             - party_id
             - coalition_name
             - coalition_decomp
+  
+  
+  - name: dim_office
+    description: "Dimensão canônica de cargos eletivos."
+    columns:
+        - name: office_key
+          tests: [unique, not_null]
+        - name: office_id
+          tests: [unique, not_null]
+        - name: office_name
+          tests: [not_null]

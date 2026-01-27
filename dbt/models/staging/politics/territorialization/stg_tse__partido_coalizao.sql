@@ -11,7 +11,16 @@ renamed as (
         safe_cast(ano_eleicao as int64)                as election_year,
         sg_uf                                          as state_abbreviation,
 
+        safe_cast(NR_TURNO as int64)                   as election_round,
         safe_cast(nr_partido as int64)                 as party_id,
+
+
+        CASE WHEN  UPPER(TP_AGREMIACAO) = 'COLIGAÇÃO' 
+				THEN 'Coligação'
+			   WHEN  UPPER(TP_AGREMIACAO) = 'PARTIDO ISOLADO' 
+				THEN 'Partido Isolado'
+			   ELSE 'Federação' 
+		  END AS coalition_type,
 
         -- Natural key of coalition (not federation).
         -- Same SQ_COLIGACAO can persist across election rounds.

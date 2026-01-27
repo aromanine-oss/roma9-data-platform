@@ -22,3 +22,72 @@ models:
       - name: party_id
         description: Partido ao qual o candidato estava filiado na eleição
         tests: [not_null]
+
+  - name: stg_tse__coalizao
+    description: Staging das coalizações/federações do TSE
+    columns:
+      - name: election_year
+        tests: [not_null]
+
+      - name: election_cod
+        tests: [not_null]
+
+      - name: state_abbreviation
+        description: Partido ao qual o candidato estava filiado na eleição
+        tests: [not_null]
+
+  - name: stg_tse__partido_coalizao
+    description: >
+      Staging table that represents the relationship between political parties
+      and electoral coalitions in Brazilian majoritarian municipal elections.
+      One row per party participating in a coalition, by election year and state.
+    
+    columns:
+      - name: election_year
+        description: Election year.
+        tests:
+          - not_null
+
+      - name: state_abbreviation
+        description: State abbreviation (UF).
+        tests:
+          - not_null
+
+      - name: coalition_id
+        description: >
+          Natural key of the electoral coalition (SQ_COLIGACAO),
+          valid at the municipal majoritarian election level.
+        tests:
+          - not_null
+
+      - name: party_id
+        description: Natural key of the political party.
+        tests:
+          - not_null
+
+      - name: coligation_name
+        description: Name of the coalition as registered in the election.
+
+      - name: coligation_decomp
+        description: Textual decomposition of the coalition composition.
+
+      - name: federation_id
+        description: >
+          Federation identifier, when applicable.
+          Null for elections or coalitions without federation.
+
+      - name: federation_name
+        description: Name of the federation, when applicable.
+
+      - name: federation_decomp
+        description: Textual decomposition of the federation composition.
+
+    tests:
+      - unique:
+          column_name: >
+            election_year || '-' ||
+            state_abbreviation || '-' ||
+            coalition_id || '-' ||
+            party_id || '-' ||
+            coligation_name || '-' ||
+            coligation_decomp

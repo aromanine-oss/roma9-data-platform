@@ -36,6 +36,8 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    int:
+      +materialized: table
 
 packages:
   - package: dbt-labs/dbt_utils

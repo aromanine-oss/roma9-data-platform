@@ -19,14 +19,14 @@ with source as (
 deduplicated as (
 
     select
-        {{ dbt_utils.generate_surrogate_key(['election_id', 'election_year', 'election_desc']) }} as election_key,
+        {{ dbt_utils.generate_surrogate_key(['election_year','election_id','election_round', 'election_desc']) }} as election_key,
         election_id,
         election_year,
         election_round,
         election_desc,
         election_date,
         row_number() over (
-            partition by election_id
+            partition by election_year,election_id,election_round, election_desc
             order by election_id
         ) as rn
     from source

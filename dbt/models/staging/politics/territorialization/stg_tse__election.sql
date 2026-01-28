@@ -7,20 +7,15 @@ with source as (
 
 renamed as (
 
-    select distinct
-            safe_cast(ano_eleicao as int64)          as election_year,
-            safe_cast(cd_eleicao as int64)           as election_id,
-            safe_cast(nr_turno as int)               as election_round,
-            ds_eleicao                               as election_desc,
-            safe.parse_date('%d/%m/%Y', dt_eleicao)  as election_date                           
+    select  SAFE_CAST(ANO_ELEICAO AS INT64)             AS election_year,
+		SAFE_CAST(CD_ELEICAO AS INT64)					AS election_id,
+		SAFE_CAST(NR_TURNO AS INT64)                    AS election_round,
+		lower(trim(ds_eleicao))         				AS election_desc,
+		SAFE.PARSE_DATE('%d/%m/%Y', DT_ELEICAO)		    AS election_date
     from source
 
 )
 
-select --election_id, count(1)
+select
     *
 from renamed
---where election_id in (144,143)
---group by renamed.election_id
---having count(1) > 1
---

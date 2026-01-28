@@ -15,8 +15,9 @@ final as (
         ----------------------------------------------------------------------
 
         {{ dbt_utils.generate_surrogate_key([
-            'source.election_id',
             'source.election_year',
+            'source.election_id',
+            'source.election_round',
             'source.election_desc'
         ]) }}                                   as election_key,
 
@@ -38,8 +39,8 @@ final as (
             'source.state_abbreviation',
             'source.coalition_id',
             'source.party_id',
-            'source.coalition_name',
-            'source.coalition_decomp'
+            'source.coligation_name',
+            'source.coligation_decomp'
         ]) }}                                   as coalition_key,
 
         {{ dbt_utils.generate_surrogate_key([

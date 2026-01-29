@@ -13,6 +13,8 @@ renamed as (
 
         safe_cast(NR_TURNO as int64)                   as election_round,
         safe_cast(nr_partido as int64)                 as party_id,
+        SG_PARTIDO                                   as party_acr,
+        NM_PARTIDO                                   as party_name,
 
 
         CASE WHEN  UPPER(TP_AGREMIACAO) = 'COLIGAÇÃO' 

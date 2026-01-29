@@ -12,6 +12,8 @@ with source as (
         state_abbreviation,
 
         party_id,
+        party_acr,
+        party_name,
 
         coalition_id,
         coalition_type,
@@ -66,6 +68,8 @@ select
 
     -- 🏛️ Partido
     party_id,
+    party_acr,
+    party_name,
 
     -- 🤝 Coalizão
     coalition_id,

@@ -59,3 +59,99 @@ If you are visiting this repository for the first time, the recommended reading 
 - Evolve products with new facts, dimensions, and metrics
 - Improve data quality, documentation, and testing
 - Explore advanced analytical use cases (NSA, NLP, LLMs) grounded in the platform
+
+```
+roma9-data-platform
+├─ analytics
+│  ├─ experiments
+│  ├─ music
+│  ├─ nlp
+│  ├─ nsa
+│  └─ politics
+│     └─ party-territorialization
+│        ├─ looker-poc
+│        │  ├─ painel_looker.png
+│        │  ├─ README.md
+│        │  └─ vw_votacao_nominal_looker.sql
+│        ├─ README.md
+│        └─ README.pt-br.md
+├─ CONTRIBUTING.md
+├─ data-lake
+│  ├─ bronze
+│  ├─ gold
+│  ├─ raw
+│  │  ├─ README.md
+│  │  └─ README.pt-br.md
+│  ├─ README.md
+│  ├─ README.pt-br.md
+│  └─ silver
+├─ dbt
+│  ├─ analyses
+│  ├─ dbt_project.yml
+│  ├─ macros
+│  ├─ models
+│  │  ├─ common
+│  │  ├─ marts
+│  │  │  ├─ music
+│  │  │  ├─ nlp
+│  │  │  ├─ nsa
+│  │  │  └─ politics
+│  │  │     └─ territorialization
+│  │  │        ├─ dimensions
+│  │  │        │  ├─ dim_candidate.sql
+│  │  │        │  ├─ dim_coalition.sql
+│  │  │        │  ├─ dim_election.sql
+│  │  │        │  ├─ dim_office.sql
+│  │  │        │  ├─ dim_party.sql
+│  │  │        │  ├─ dim_party_coalition.sql
+│  │  │        │  └─ dim_territory.sql
+│  │  │        ├─ facts
+│  │  │        │  ├─ fct_votacao_nominal.sql
+│  │  │        │  └─ int_votacao_nominal.sql
+│  │  │        └─ schema.yml
+│  │  └─ staging
+│  │     ├─ politics
+│  │     │  └─ territorialization
+│  │     │     ├─ stg_tse.yml
+│  │     │     ├─ stg_tse__candidato.sql
+│  │     │     ├─ stg_tse__coalizao.sql
+│  │     │     ├─ stg_tse__election.sql
+│  │     │     ├─ stg_tse__office.sql
+│  │     │     ├─ stg_tse__partido.sql
+│  │     │     ├─ stg_tse__partido_coalizao.sql
+│  │     │     ├─ stg_tse__votacao_nominal.sql
+│  │     │     ├─ stg_tse__votacao_nominal.yml
+│  │     │     └─ _tse__sources.yml
+│  │     └─ stg__healthcheck.sql
+│  ├─ package-lock.yml
+│  ├─ packages.yml
+│  ├─ README.md
+│  ├─ README.pt-br.md
+│  ├─ seeds
+│  ├─ snapshots
+│  └─ tests
+├─ LICENSE
+├─ logs
+├─ notebooks
+│  ├─ nlp
+│  └─ nsa
+├─ README.md
+├─ README.pt-br.md
+└─ scripts
+   ├─ ingestion
+   │  ├─ politics
+   │  │  └─ territorialization
+   │  │     ├─ infer_schema_tse.py
+   │  │     ├─ load_tse_votacao_nominal.py
+   │  │     ├─ load_tse_votacao_nominal_bq.py
+   │  │     ├─ load_tse_votacao_nominal_create_table_postgres.py
+   │  │     ├─ load_tse_votacao_nominal_create_table_raw_bigquery.sql
+   │  │     ├─ load_tse_votacao_nominal_local_csv_postgres.py
+   │  │     └─ schema_tse_votacao_nominal.json
+   │  ├─ README.md
+   │  └─ README.pt-br.md
+   ├─ transform
+   └─ utils
+      └─ CREATE_SCHEMA_POSTGRES.sql
+
+```

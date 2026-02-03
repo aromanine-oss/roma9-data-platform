@@ -1,4 +1,3 @@
-# Ingestion Scripts
+This directory contains ingestion and loading scripts responsible for bringing external data into the platform.
 
-Utility scripts for ingesting raw data into the data lake and BigQuery.
-These scripts are versioned for reproducibility but are not production pipelines.
+These scripts represent the first operational step of the analytical lifecycle, transforming external datasets (such as public CSV files) into reproducible and structured inputs for the data lake.

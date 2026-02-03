@@ -2,105 +2,60 @@
 
 🇧🇷 Read in Portuguese: [README.pt-br.md](README.pt-br.md)
 
+Personal data platform designed as a long-lived analytical product, not a demo.
 
-Personal data platform for lifelong analytics: pipelines, dbt models, NSA/SNA, NLP, LLMs, dashboards, and experimentation.
+This repository represents the backbone of my personal data platform, built to support scalable, versioned, and low-cost analytics over time.
+Its core focus is data engineering and analytical modeling, with domain-driven analytical products built on top of a consistent data lake and dbt-based warehouse.
 
-This repository is the backbone of my personal data platform, bringing together data ingestion pipelines, analytical modeling with dbt, social and social network analysis (NSA/SNA), natural language processing (NLP), dashboards, and exploratory experiments.
+As a concrete example of this platform in action, the repository includes a complete analytical data warehouse built from public CSV data: ingestion, loading, transformation with dbt, and visualization through Looker Studio.
+Although intentionally simple (one fact table and a small set of dimensions), this warehouse represents a fully functional, end-to-end analytical product.
 
-## Main structure
+## How to navigate this repository
 
-- **data-lake/** – raw, refined, and curated data (raw → bronze → silver → gold)
-- **dbt/** – dbt models for transformations and semantic data warehouse
-- **analytics/** – domain-oriented analytical projects
-- **notebooks/** – exploratory notebooks (NSA, NLP, experiments)
-- **scripts/** – ingestion, transformation, and utility scripts
+This repository is organized as a long-lived analytical platform, composed of three clearly separated layers: platform foundation, analytical products, and experimentation.
+
+If you are visiting this repository for the first time, the recommended reading path is:
+
+1. **Platform overview (this README)**
+2. **Platform foundation**
+   - `data-lake/`
+   - `scripts/ingestion/`
+3. **Analytical foundation (Data Warehouse)**
+   - `dbt/`
+4. **Delivered analytical product**
+   - `analytics/politics/party-territorialization/`
+5. **Domain-oriented analytics**
+   - `analytics/`
+6. **Experiments and research**
+   - `notebooks/`, `analytics/experiments/`
 
 ## Goals
 
-1. Build a scalable, versioned, and low-cost **data lake**
-2. Create reliable **pipelines and analytical transformations** with dbt
-3. Perform **social network analysis (NSA/SNA)** on voting data and political patterns
-4. Apply **NLP** to political speeches and other textual data
-5. Explore **LLMs** in analytical and experimental contexts
-6. Visualize results through **dashboards**
-7. Maintain a long-term **data laboratory** for future projects and research
+### Platform (core)
+1. Build a scalable, versioned, and low-cost data lake
+2. Create reliable pipelines and analytical transformations using dbt
+3. Maintain a consistent analytical foundation, validated by a delivered end-to-end data warehouse
 
-## Technologies
+### Analytical products
+4. Perform social network analysis (NSA/SNA) on voting data and political patterns
+5. Apply NLP to political speeches and other textual datasets
+6. Visualize analytical results through dashboards and domain-oriented views
 
-- Git + GitHub (version control and governance)
-- Google Cloud Platform (Cloud Storage, BigQuery)
-- dbt (transformations, tests, and documentation)
-- Python (ETL, NLP, NSA/SNA)
-- Looker Studio / Power BI (dashboards and visualization)
+### Exploration and experimentation
+7. Explore LLMs in analytical and experimental contexts, grounded in real data
+8. Maintain a long-term data laboratory for future projects and research
 
-## Repository structure
-```
-roma9-data-platform
-├─ analytics
-│  ├─ experiments
-│  ├─ music
-│  ├─ nlp
-│  ├─ nsa
-│  └─ politics
-│     └─ party-territorialization
-│        └─ README.md
-├─ CONTRIBUTING.md
-├─ data-lake
-│  ├─ bronze
-│  ├─ gold
-│  ├─ raw
-│  │  └─ README.md
-│  └─ silver
-├─ dbt
-│  ├─ analyses
-│  ├─ dbt_project.yml
-│  ├─ macros
-│  ├─ models
-│  │  ├─ common
-│  │  ├─ marts
-│  │  │  ├─ music
-│  │  │  ├─ nlp
-│  │  │  ├─ nsa
-│  │  │  └─ politics
-│  │  │     └─ territorialization
-│  │  │        ├─ dimensions
-│  │  │        │  └─ dim_territory.sql
-│  │  │        ├─ facts
-│  │  │        │  └─ fct_votacao_nominal.sql
-│  │  │        └─ schema.yml
-│  │  └─ staging
-│  │     ├─ politics
-│  │     │  └─ territorialization
-│  │     │     ├─ stg_tse__votacao_nominal.sql
-│  │     │     ├─ stg_tse__votacao_nominal.yml
-│  │     │     └─ _tse__sources.yml
-│  │     └─ stg__healthcheck.sql
-│  ├─ package-lock.yml
-│  ├─ packages.yml
-│  ├─ README.md
-│  ├─ seeds
-│  ├─ snapshots
-│  └─ tests
-├─ LICENSE
-├─ logs
-├─ notebooks
-│  ├─ nlp
-│  └─ nsa
-├─ README.md
-└─ scripts
-   ├─ ingestion
-   │  ├─ politics
-   │  │  └─ territorialization
-   │  │     ├─ infer_schema_tse.py
-   │  │     ├─ load_tse_votacao_nominal.py
-   │  │     ├─ load_tse_votacao_nominal_bq.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_postgres.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_raw_bigquery.sql
-   │  │     ├─ load_tse_votacao_nominal_local_csv_postgres.py
-   │  │     └─ schema_tse_votacao_nominal.json
-   │  └─ README.md
-   ├─ transform
-   └─ utils
-      └─ CREATE_SCHEMA_POSTGRES.sql
+## Current state & roadmap
 
-```
+### Current state
+- Layered data lake
+- Reproducible ingestion from public CSV sources
+- Dimensional data warehouse modeled with dbt
+- At least one delivered domain-oriented analytical product
+- Dashboards validating end-to-end coherence
+
+### Roadmap
+- Expand the warehouse with additional domain-specific marts
+- Evolve products with new facts, dimensions, and metrics
+- Improve data quality, documentation, and testing
+- Explore advanced analytical use cases (NSA, NLP, LLMs) grounded in the platform

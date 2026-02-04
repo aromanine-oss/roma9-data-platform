@@ -297,3 +297,10 @@ models:
         description: Quantidade de votos válidos
         tests:
           - not_null
+      - name: pct_nominal_votes
+        description: Percentual de votos nominais em relação aos válidos
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+                expression: "between 0 and 1"
+                name: pct_nominal_votes_between_0_and_1

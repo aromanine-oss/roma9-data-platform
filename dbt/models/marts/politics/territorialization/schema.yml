@@ -304,3 +304,57 @@ models:
           - dbt_utils.expression_is_true:
                 expression: "between 0 and 1"
                 name: pct_nominal_votes_between_0_and_1
+
+  - name: fct_votacao_rank_cand_mun
+    description: >
+      Fato de votação nominal consolidada, no nível de
+      eleição, candidato, cargo, coligação e território,
+      com ranking de votos por candidato e município.
+    columns:
+      - name: election_key
+        description: FK para dim_election
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_election')
+              field: election_key
+
+      - name: candidate_key
+        description: FK para dim_candidate
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_candidate')
+              field: candidate_key
+
+      - name: office_key
+        description: FK para dim_office
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_office')
+              field: office_key
+
+      - name: coalition_key
+        description: FK para dim_party_coalition
+        tests:
+          - relationships:
+              to: ref('dim_party_coalition')
+              field: coalizao_partido_sk
+
+      - name: territory_key
+        description: FK para dim_territory
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_territory')
+              field: territory_sk
+
+      - name: rank_candidato
+        description: Ranking do candidato por município e eleição, com base na quantidade de votos nominais
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+                expression: " > 0"
+                name: rank_candidato_positive
+      

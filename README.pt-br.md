@@ -1,14 +1,38 @@
-# roma9-data-platform
+﻿# roma9-data-platform
 
-Personal data platform projetada como um produto analítico de longo prazo, não como uma demo.
+Read in English: [README.md](README.md)
 
-Este repositório representa a espinha dorsal da minha plataforma pessoal de dados, construída para suportar análises escaláveis, versionadas e de baixo custo ao longo do tempo.
-Seu foco principal é engenharia de dados e modelagem analítica, com produtos analíticos orientados a domínio construídos sobre um data lake consistente e um data warehouse com dbt.
+Plataforma pessoal de dados projetada como um produto analitico de longo prazo, nao como uma demo.
 
-Como exemplo concreto da plataforma em funcionamento, o repositório inclui um data warehouse analítico completo construído a partir de dados públicos em CSV: ingestão, carga, transformação com dbt e visualização no Looker Studio.
-Embora intencionalmente simples (uma tabela fato e um pequeno conjunto de dimensões), esse warehouse representa um produto analítico ponta a ponta totalmente funcional.
+Este repositorio representa a espinha dorsal da minha plataforma pessoal de dados, construida para suportar analises escalaveis, versionadas e de baixo custo ao longo do tempo.
+Seu foco principal e engenharia de dados e modelagem analitica, com produtos analiticos orientados a dominio construidos sobre um data lake consistente e um data warehouse com dbt.
 
-## Como navegar neste repositório
+Como exemplo concreto da plataforma em funcionamento, o repositorio inclui um data warehouse analitico completo construido a partir de dados publicos em CSV: ingestao, carga, transformacao com dbt e visualizacao no Looker Studio.
+Embora intencionalmente simples (uma tabela fato e um pequeno conjunto de dimensoes), esse warehouse representa um produto analitico ponta a ponta totalmente funcional.
+
+## Inicio rapido
+
+```bash
+git clone https://github.com/aromanine-oss/roma9-data-platform.git
+cd roma9-data-platform
+cd dbt && dbt deps && dbt run && dbt test
+```
+
+## Pre-requisitos
+
+- Python 3.10+
+- dbt Core (com o adaptador do seu target configurado)
+- Acesso ao seu data warehouse de destino (por exemplo, BigQuery ou Postgres)
+- Arquivos CSV publicos usados pelos scripts de ingestao
+
+## Artefatos principais
+
+- Produto analitico entregue (dominio): `analytics/politics/party-territorialization/README.pt-br.md`
+- Prova de conceito no Looker: `analytics/politics/party-territorialization/looker-poc/README.md`
+- View SQL do Looker: `analytics/politics/party-territorialization/looker-poc/vw_votacao_nominal_looker.sql`
+- Modelo fato principal no dbt: `dbt/models/marts/politics/territorialization/facts/fct_votacao_nominal.sql`
+
+## Como navegar neste repositorio
 
 Este repositório é organizado como uma plataforma analítica de longo prazo, composta por três camadas bem definidas: fundação da plataforma, produtos analíticos e experimentação.
 
@@ -58,98 +82,32 @@ Para quem está visitando o projeto pela primeira vez, o caminho de leitura reco
 - Aprimorar qualidade de dados, documentação e testes
 - Explorar casos analíticos avançados (NSA, NLP, LLMs) ancorados na plataforma
 
+```text
+roma9-data-platform/
+|- analytics/
+|  |- experiments/
+|  |- music/
+|  |- nlp/
+|  |- nsa/
+|  `- politics/
+|     `- party-territorialization/
+|- data-lake/
+|  |- raw/
+|  |- bronze/
+|  |- silver/
+|  `- gold/
+|- dbt/
+|  |- models/
+|  |- macros/
+|  |- seeds/
+|  |- snapshots/
+|  `- tests/
+|- notebooks/
+|- scripts/
+|  |- ingestion/
+|  |- transform/
+|  `- utils/
+|- README.md
+`- README.pt-br.md
 ```
-roma9-data-platform
-├─ analytics
-│  ├─ experiments
-│  ├─ music
-│  ├─ nlp
-│  ├─ nsa
-│  └─ politics
-│     └─ party-territorialization
-│        ├─ looker-poc
-│        │  ├─ painel_looker.png
-│        │  ├─ README.md
-│        │  └─ vw_votacao_nominal_looker.sql
-│        ├─ README.md
-│        └─ README.pt-br.md
-├─ CONTRIBUTING.md
-├─ data-lake
-│  ├─ bronze
-│  ├─ gold
-│  ├─ raw
-│  │  ├─ README.md
-│  │  └─ README.pt-br.md
-│  ├─ README.md
-│  ├─ README.pt-br.md
-│  └─ silver
-├─ dbt
-│  ├─ analyses
-│  ├─ dbt_project.yml
-│  ├─ macros
-│  ├─ models
-│  │  ├─ common
-│  │  ├─ marts
-│  │  │  ├─ music
-│  │  │  ├─ nlp
-│  │  │  ├─ nsa
-│  │  │  └─ politics
-│  │  │     └─ territorialization
-│  │  │        ├─ dimensions
-│  │  │        │  ├─ dim_candidate.sql
-│  │  │        │  ├─ dim_coalition.sql
-│  │  │        │  ├─ dim_election.sql
-│  │  │        │  ├─ dim_office.sql
-│  │  │        │  ├─ dim_party.sql
-│  │  │        │  ├─ dim_party_coalition.sql
-│  │  │        │  └─ dim_territory.sql
-│  │  │        ├─ facts
-│  │  │        │  ├─ fct_votacao_nominal.sql
-│  │  │        │  └─ int_votacao_nominal.sql
-│  │  │        └─ schema.yml
-│  │  └─ staging
-│  │     ├─ politics
-│  │     │  └─ territorialization
-│  │     │     ├─ stg_tse.yml
-│  │     │     ├─ stg_tse__candidato.sql
-│  │     │     ├─ stg_tse__coalizao.sql
-│  │     │     ├─ stg_tse__election.sql
-│  │     │     ├─ stg_tse__office.sql
-│  │     │     ├─ stg_tse__partido.sql
-│  │     │     ├─ stg_tse__partido_coalizao.sql
-│  │     │     ├─ stg_tse__votacao_nominal.sql
-│  │     │     ├─ stg_tse__votacao_nominal.yml
-│  │     │     └─ _tse__sources.yml
-│  │     └─ stg__healthcheck.sql
-│  ├─ package-lock.yml
-│  ├─ packages.yml
-│  ├─ README.md
-│  ├─ README.pt-br.md
-│  ├─ seeds
-│  ├─ snapshots
-│  └─ tests
-├─ LICENSE
-├─ logs
-├─ notebooks
-│  ├─ nlp
-│  └─ nsa
-├─ README.md
-├─ README.pt-br.md
-└─ scripts
-   ├─ ingestion
-   │  ├─ politics
-   │  │  └─ territorialization
-   │  │     ├─ infer_schema_tse.py
-   │  │     ├─ load_tse_votacao_nominal.py
-   │  │     ├─ load_tse_votacao_nominal_bq.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_postgres.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_raw_bigquery.sql
-   │  │     ├─ load_tse_votacao_nominal_local_csv_postgres.py
-   │  │     └─ schema_tse_votacao_nominal.json
-   │  ├─ README.md
-   │  └─ README.pt-br.md
-   ├─ transform
-   └─ utils
-      └─ CREATE_SCHEMA_POSTGRES.sql
 
-```

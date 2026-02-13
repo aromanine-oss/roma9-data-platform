@@ -1,6 +1,6 @@
-# roma9-data-platform
+﻿# roma9-data-platform
 
-🇧🇷 Read in Portuguese: [README.pt-br.md](README.pt-br.md)
+Read in Portuguese: [README.pt-br.md](README.pt-br.md)
 
 Personal data platform designed as a long-lived analytical product, not a demo.
 
@@ -9,6 +9,28 @@ Its core focus is data engineering and analytical modeling, with domain-driven a
 
 As a concrete example of this platform in action, the repository includes a complete analytical data warehouse built from public CSV data: ingestion, loading, transformation with dbt, and visualization through Looker Studio.
 Although intentionally simple (one fact table and a small set of dimensions), this warehouse represents a fully functional, end-to-end analytical product.
+
+## Quickstart
+
+```bash
+git clone https://github.com/aromanine-oss/roma9-data-platform.git
+cd roma9-data-platform
+cd dbt && dbt deps && dbt run && dbt test
+```
+
+## Prerequisites
+
+- Python 3.10+
+- dbt Core (with your target adapter configured)
+- Access to your target warehouse (for example, BigQuery or Postgres)
+- Public CSV source files used by ingestion scripts
+
+## Key artifacts
+
+- Delivered analytical product (domain): `analytics/politics/party-territorialization/README.md`
+- Looker proof of concept: `analytics/politics/party-territorialization/looker-poc/README.md`
+- Looker SQL view: `analytics/politics/party-territorialization/looker-poc/vw_votacao_nominal_looker.sql`
+- Main fact model in dbt: `dbt/models/marts/politics/territorialization/facts/fct_votacao_nominal.sql`
 
 ## How to navigate this repository
 
@@ -60,98 +82,34 @@ If you are visiting this repository for the first time, the recommended reading 
 - Improve data quality, documentation, and testing
 - Explore advanced analytical use cases (NSA, NLP, LLMs) grounded in the platform
 
-```
-roma9-data-platform
-├─ analytics
-│  ├─ experiments
-│  ├─ music
-│  ├─ nlp
-│  ├─ nsa
-│  └─ politics
-│     └─ party-territorialization
-│        ├─ looker-poc
-│        │  ├─ painel_looker.png
-│        │  ├─ README.md
-│        │  └─ vw_votacao_nominal_looker.sql
-│        ├─ README.md
-│        └─ README.pt-br.md
-├─ CONTRIBUTING.md
-├─ data-lake
-│  ├─ bronze
-│  ├─ gold
-│  ├─ raw
-│  │  ├─ README.md
-│  │  └─ README.pt-br.md
-│  ├─ README.md
-│  ├─ README.pt-br.md
-│  └─ silver
-├─ dbt
-│  ├─ analyses
-│  ├─ dbt_project.yml
-│  ├─ macros
-│  ├─ models
-│  │  ├─ common
-│  │  ├─ marts
-│  │  │  ├─ music
-│  │  │  ├─ nlp
-│  │  │  ├─ nsa
-│  │  │  └─ politics
-│  │  │     └─ territorialization
-│  │  │        ├─ dimensions
-│  │  │        │  ├─ dim_candidate.sql
-│  │  │        │  ├─ dim_coalition.sql
-│  │  │        │  ├─ dim_election.sql
-│  │  │        │  ├─ dim_office.sql
-│  │  │        │  ├─ dim_party.sql
-│  │  │        │  ├─ dim_party_coalition.sql
-│  │  │        │  └─ dim_territory.sql
-│  │  │        ├─ facts
-│  │  │        │  ├─ fct_votacao_nominal.sql
-│  │  │        │  └─ int_votacao_nominal.sql
-│  │  │        └─ schema.yml
-│  │  └─ staging
-│  │     ├─ politics
-│  │     │  └─ territorialization
-│  │     │     ├─ stg_tse.yml
-│  │     │     ├─ stg_tse__candidato.sql
-│  │     │     ├─ stg_tse__coalizao.sql
-│  │     │     ├─ stg_tse__election.sql
-│  │     │     ├─ stg_tse__office.sql
-│  │     │     ├─ stg_tse__partido.sql
-│  │     │     ├─ stg_tse__partido_coalizao.sql
-│  │     │     ├─ stg_tse__votacao_nominal.sql
-│  │     │     ├─ stg_tse__votacao_nominal.yml
-│  │     │     └─ _tse__sources.yml
-│  │     └─ stg__healthcheck.sql
-│  ├─ package-lock.yml
-│  ├─ packages.yml
-│  ├─ README.md
-│  ├─ README.pt-br.md
-│  ├─ seeds
-│  ├─ snapshots
-│  └─ tests
-├─ LICENSE
-├─ logs
-├─ notebooks
-│  ├─ nlp
-│  └─ nsa
-├─ README.md
-├─ README.pt-br.md
-└─ scripts
-   ├─ ingestion
-   │  ├─ politics
-   │  │  └─ territorialization
-   │  │     ├─ infer_schema_tse.py
-   │  │     ├─ load_tse_votacao_nominal.py
-   │  │     ├─ load_tse_votacao_nominal_bq.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_postgres.py
-   │  │     ├─ load_tse_votacao_nominal_create_table_raw_bigquery.sql
-   │  │     ├─ load_tse_votacao_nominal_local_csv_postgres.py
-   │  │     └─ schema_tse_votacao_nominal.json
-   │  ├─ README.md
-   │  └─ README.pt-br.md
-   ├─ transform
-   └─ utils
-      └─ CREATE_SCHEMA_POSTGRES.sql
+## Repository structure
 
+```text
+roma9-data-platform/
+|- analytics/
+|  |- experiments/
+|  |- music/
+|  |- nlp/
+|  |- nsa/
+|  `- politics/
+|     `- party-territorialization/
+|- data-lake/
+|  |- raw/
+|  |- bronze/
+|  |- silver/
+|  `- gold/
+|- dbt/
+|  |- models/
+|  |- macros/
+|  |- seeds/
+|  |- snapshots/
+|  `- tests/
+|- notebooks/
+|- scripts/
+|  |- ingestion/
+|  |- transform/
+|  `- utils/
+|- README.md
+`- README.pt-br.md
 ```
+

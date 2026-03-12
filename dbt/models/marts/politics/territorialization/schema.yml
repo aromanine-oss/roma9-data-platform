@@ -21,12 +21,10 @@ models:
       - name: zone_number
         tests:
           - not_null
-  
+
   - name: dim_party
     description: >
-      Dimensão de partidos políticos (TSE),
-      modelada como Slowly Changing Dimension Type 2,
-      ancorada em election_year.
+      Dimensão de partidos políticos (TSE), modelada como Slowly Changing Dimension Type 2, ancorada em election_year.
 
     columns:
       - name: party_sk
@@ -68,10 +66,7 @@ models:
 
   - name: dim_coalition
     description: >
-      Dimension representing electoral coalitions and federations.
-      One record represents a unique coalition identity by election year,
-      state and coalition name. Party-level relationships are handled
-      through bridge tables.
+      Dimension representing electoral coalitions and federations. One record represents a unique coalition identity by election year, state and coalition name. Party-level relationships are handled through bridge tables.
 
     columns:
       - name: coalition_sk
@@ -87,8 +82,7 @@ models:
 
       - name: coalition_id
         description: >
-          Source identifier from TSE (sq_coligacao). Kept for lineage and debugging
-          purposes only. Does not define analytical identity.
+          Source identifier from TSE (sq_coligacao). Kept for lineage and debugging purposes only. Does not define analytical identity.
 
       - name: coalition_name
         description: Official coalition or federation name
@@ -100,7 +94,7 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['Coligação', 'Partido Isolado', 'FEDERAÇÃO']
+              values: [ 'Coligação', 'Partido Isolado', 'FEDERAÇÃO' ]
 
       - name: election_year
         description: Election year in which the coalition is valid
@@ -120,10 +114,7 @@ models:
 
   - name: dim_party_coalition
     description: >
-      Dimensão que representa a relação entre partidos e coalizões eleitorais,
-      contextualizada por eleição, turno e UF.
-      Cada linha representa um partido participante de uma coalizão
-      (ou partido isolado) em um determinado turno eleitoral.
+      Dimensão que representa a relação entre partidos e coalizões eleitorais, contextualizada por eleição, turno e UF. Cada linha representa um partido participante de uma coalizão (ou partido isolado) em um determinado turno eleitoral.
 
     columns:
 
@@ -142,7 +133,7 @@ models:
         description: Turno da eleição.
         tests:
           - not_null
-          
+
       - name: state_abbreviation
         description: Sigla da UF.
         tests:
@@ -182,16 +173,16 @@ models:
             - party_id
             - coalition_name
             - coalition_decomp
-  
+
   - name: dim_office
     description: "Dimensão canônica de cargos eletivos."
     columns:
-        - name: office_key
-          tests: [unique, not_null]
-        - name: office_id
-          tests: [unique, not_null]
-        - name: office_name
-          tests: [not_null]
+      - name: office_key
+        tests: [ unique, not_null ]
+      - name: office_id
+        tests: [ unique, not_null ]
+      - name: office_name
+        tests: [ not_null ]
 
   - name: dim_election
     tests:
@@ -208,8 +199,7 @@ models:
 
   - name: dim_candidate
     description: >
-      Dimensão de candidatos.
-      Grain: uma linha por candidato por eleição.
+      Dimensão de candidatos. Grain: uma linha por candidato por eleição.
 
     columns:
       - name: candidate_key
@@ -245,8 +235,7 @@ models:
 
   - name: fct_votacao_nominal
     description: >
-      Fato de votação nominal consolidada, no nível de
-      eleição, candidato, cargo, coligação e território.
+      Fato de votação nominal consolidada, no nível de eleição, candidato, cargo, coligação e território.
 
     columns:
       - name: election_key
@@ -302,14 +291,12 @@ models:
         tests:
           - not_null
           - dbt_utils.expression_is_true:
-                expression: "between 0 and 1"
-                name: pct_nominal_votes_between_0_and_1
+              expression: "between 0 and 1"
+              name: pct_nominal_votes_between_0_and_1
 
   - name: fct_votacao_rank_cand_mun
-    description: >
-      Fato de votação nominal consolidada, no nível de
-      eleição, candidato, cargo, coligação e território,
-      com ranking de votos por candidato e município.
+    description: >-
+      Fato de votação nominal consolidada, no nível de eleição, candidato, cargo, coligação e território, com ranking de votos por candidato e município.
     columns:
       - name: election_key
         description: FK para dim_election
@@ -351,10 +338,42 @@ models:
               field: territory_sk
 
       - name: rank_candidato
-        description: Ranking do candidato por município e eleição, com base na quantidade de votos nominais
+        description: Ranking do candidato por município, cargo e eleição, com base na quantidade de votos nominais
         tests:
           - not_null
           - dbt_utils.expression_is_true:
-                expression: " > 0"
-                name: rank_candidato_positive
-      
+              expression: " > 0"
+              name: rank_candidato_positive
+      - name: total_votos_municipio
+        description: Total de votos nominais no município para o cargo e eleição, usado para calcular competitividade
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: " > 0"
+              name: total_votos_municipio_positive
+  - name: fct_votacao_competitividade_mun
+    description: >
+      Fato de competitividade eleitoral, calculado a partir do ranking de votos por candidato e município. Grain: município por eleição.
+    columns:
+      - name: election_key
+        description: FK para dim_election
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_election')
+              field: election_key
+
+      - name: territory_key
+        description: FK para dim_territory
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_territory')
+              field: territory_sk
+
+      - name: pct_diff
+        description: Percentual de diferença entre os dois candidatos mais votados em um município
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 1"
+              name: pct_diff_1_2_between_0_and_1

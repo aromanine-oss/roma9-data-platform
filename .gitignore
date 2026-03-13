@@ -225,3 +225,5 @@ dbt/target/
 
 # Local DBA / misc toolbox
 scripts/misc/
+
+.vscode

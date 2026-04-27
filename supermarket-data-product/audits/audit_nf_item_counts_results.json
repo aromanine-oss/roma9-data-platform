@@ -1,0 +1,249 @@
+{
+  "total_html_notes": 81,
+  "total_parse_errors": 0,
+  "total_mismatches": 19,
+  "mismatches": [
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\12.html",
+      "id_nota": "41260478116670000750650290007731111005497763",
+      "data_emissao": "21/04/2026 16:08:28",
+      "html_item_count": 10,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\12.html"
+      ],
+      "db_item_count": 9,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\9.html",
+      "id_nota": "41260478116670003857650040000838651006322770",
+      "data_emissao": "19/04/2026 12:24:18",
+      "html_item_count": 3,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\9.html"
+      ],
+      "db_item_count": 2,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\10.html",
+      "id_nota": "41260283646984004369651110003259781496895940",
+      "data_emissao": "14/02/2026 15:30:13",
+      "html_item_count": 14,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\10.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange3.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange4.html"
+      ],
+      "db_item_count": 12,
+      "delta_items": 2
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\17.html",
+      "id_nota": "41260283646984004369651130003346981238014796",
+      "data_emissao": "20/02/2026 13:28:38",
+      "html_item_count": 14,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\17.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange6.html"
+      ],
+      "db_item_count": 8,
+      "delta_items": 6
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\20.html",
+      "id_nota": "41260278116670003857650060000931271002703125",
+      "data_emissao": "22/02/2026 14:43:39",
+      "html_item_count": 4,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\20.html"
+      ],
+      "db_item_count": 3,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\24.html",
+      "id_nota": "41260283646984004369651100002995761629267838",
+      "data_emissao": "26/02/2026 11:30:51",
+      "html_item_count": 16,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\24.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\25.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\32.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange9.html"
+      ],
+      "db_item_count": 13,
+      "delta_items": 3
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\26.html",
+      "id_nota": "41260283646984004369651100002995771894244821",
+      "data_emissao": "26/02/2026 11:32:25",
+      "html_item_count": 4,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\26.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\31.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange101.html"
+      ],
+      "db_item_count": 2,
+      "delta_items": 2
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\29.html",
+      "id_nota": "41260283646984004369651120002633041625171458",
+      "data_emissao": "28/02/2026 14:31:37",
+      "html_item_count": 6,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\29.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange11.html"
+      ],
+      "db_item_count": 5,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\4.html",
+      "id_nota": "41260283646984004369651130003328229175012375",
+      "data_emissao": "05/02/2026 21:14:58",
+      "html_item_count": 34,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\4.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange1.html"
+      ],
+      "db_item_count": 20,
+      "delta_items": 14
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\5.html",
+      "id_nota": "41260283646984004369651130003328209388955272",
+      "data_emissao": "05/02/2026 21:06:47",
+      "html_item_count": 4,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\5.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange2.html"
+      ],
+      "db_item_count": 3,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange5.html",
+      "id_nota": "41260283646984004369651110003259791253637501",
+      "data_emissao": "14/02/2026 15:31:25",
+      "html_item_count": 9,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange5.html"
+      ],
+      "db_item_count": 4,
+      "delta_items": 5
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\11.html",
+      "id_nota": "41260178116670000750650220006230421009183601",
+      "data_emissao": "14/01/2026 10:32:29",
+      "html_item_count": 15,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\11.html"
+      ],
+      "db_item_count": 14,
+      "delta_items": 1
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\15.html",
+      "id_nota": "41260183646984004369651120002586581736165262",
+      "data_emissao": "17/01/2026 12:37:12",
+      "html_item_count": 26,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\15.html"
+      ],
+      "db_item_count": 11,
+      "delta_items": 15
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\19.html",
+      "id_nota": "41260178116670000750650460008367091004402405",
+      "data_emissao": "27/01/2026 18:04:59",
+      "html_item_count": 9,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\19.html"
+      ],
+      "db_item_count": 6,
+      "delta_items": 3
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\5.html",
+      "id_nota": "41260178116670000750650210008791491000139937",
+      "data_emissao": "03/01/2026 13:23:50",
+      "html_item_count": 14,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\5.html"
+      ],
+      "db_item_count": 12,
+      "delta_items": 2
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\10.html",
+      "id_nota": "41260383646984004369651130003381021998497560",
+      "data_emissao": "15/03/2026 18:57:07",
+      "html_item_count": 25,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\10.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\Imprimir DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA_3.html"
+      ],
+      "db_item_count": 21,
+      "delta_items": 4
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670000750650290007682391003080603.html",
+      "id_nota": "41260378116670000750650290007682391003080603",
+      "data_emissao": "22/03/2026 13:11:58",
+      "html_item_count": 18,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670000750650290007682391003080603.html",
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA.html"
+      ],
+      "db_item_count": 11,
+      "delta_items": 7
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670001307650240000900401009318027.html",
+      "id_nota": "41260378116670001307650240000900401009318027",
+      "data_emissao": "12/03/2026 11:02:25",
+      "html_item_count": 6,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670001307650240000900401009318027.html"
+      ],
+      "db_item_count": 4,
+      "delta_items": 2
+    },
+    {
+      "source_type": "single",
+      "source_path": "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA_2.html",
+      "id_nota": "41260383646984004369651150003001261364818948",
+      "data_emissao": "27/03/2026 20:59:14",
+      "html_item_count": 25,
+      "source_paths": [
+        "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA_2.html"
+      ],
+      "db_item_count": 12,
+      "delta_items": 13
+    }
+  ],
+  "parse_errors": []
+}

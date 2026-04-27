@@ -55,7 +55,9 @@ final as (
 
         source.qty_votes               as qty_nominal_votes,
         source.qty_valid_votes         as qty_valid_votes,
-        CASE WHEN source.qty_valid_votes > 0 THEN source.qty_votes / source.qty_valid_votes ELSE 0 END AS pct_nominal_votes --Valid only for 2018 elections and above
+        CASE WHEN source.qty_valid_votes > 0 
+                THEN source.qty_votes / source.qty_valid_votes 
+                   ELSE 0 END AS pct_nominal_votes --Valid only for 2018 elections and above
 
     from source
 

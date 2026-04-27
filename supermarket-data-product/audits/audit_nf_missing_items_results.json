@@ -1,0 +1,713 @@
+[
+  {
+    "id_nota": "41260478116670000750650290007731111005497763",
+    "data_emissao": "21/04/2026 16:08:28",
+    "html_item_count": 10,
+    "db_item_count": 9,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\12.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "EMPANADO SADIA",
+        "codigo_produto": "19069330",
+        "quantidade": "1",
+        "valor_unit": "5,49",
+        "valor_total": "5,49",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260478116670003857650040000838651006322770",
+    "data_emissao": "19/04/2026 12:24:18",
+    "html_item_count": 3,
+    "db_item_count": 2,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\abr\\9.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "CERV.ANTAR.ORI",
+        "codigo_produto": "17188190",
+        "quantidade": "12",
+        "valor_unit": "4,99",
+        "valor_total": "59,88",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651110003259781496895940",
+    "data_emissao": "14/02/2026 15:30:13",
+    "html_item_count": 14,
+    "db_item_count": 12,
+    "delta_items": 2,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\10.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange3.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange4.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "AGUA MINERAL AGUA PURA SGAS PET 15L",
+        "codigo_produto": "7896468800077",
+        "quantidade": "1",
+        "valor_unit": "2,69",
+        "valor_total": "2,69",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA MINERAL S PELLEGRINO CGAS GF 750",
+        "codigo_produto": "8002270000188",
+        "quantidade": "1",
+        "valor_unit": "33,9",
+        "valor_total": "33,90",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651130003346981238014796",
+    "data_emissao": "20/02/2026 13:28:38",
+    "html_item_count": 14,
+    "db_item_count": 8,
+    "delta_items": 6,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\17.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange6.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "AGUA MINERAL AGUA PURA SGAS PET 5L",
+        "codigo_produto": "7896468800091",
+        "quantidade": "1",
+        "valor_unit": "7,15",
+        "valor_total": "7,15",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA SAB AGUA DA PEDRA F VERM CG 350M",
+        "codigo_produto": "7896436103308",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL FRUTAS VERMELHAS CGAS 510",
+        "codigo_produto": "7894900521504",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL LIMAO CGAS 510ML",
+        "codigo_produto": "7894900520507",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL TANGERINA CAP LIMAO 510ML",
+        "codigo_produto": "7894900521009",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260278116670003857650060000931271002703125",
+    "data_emissao": "22/02/2026 14:43:39",
+    "html_item_count": 4,
+    "db_item_count": 3,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\20.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "SALADA STRAP B",
+        "codigo_produto": "13008650",
+        "quantidade": "1",
+        "valor_unit": "6,99",
+        "valor_total": "6,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651100002995761629267838",
+    "data_emissao": "26/02/2026 11:30:51",
+    "html_item_count": 16,
+    "db_item_count": 13,
+    "delta_items": 3,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\24.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\25.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\32.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange9.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "REFRIG SAB H2OH LIMONETO PET 500ML",
+        "codigo_produto": "7892840812850",
+        "quantidade": "1",
+        "valor_unit": "4,49",
+        "valor_total": "4,49",
+        "missing_count": 4,
+        "html_count": 4,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651100002995771894244821",
+    "data_emissao": "26/02/2026 11:32:25",
+    "html_item_count": 4,
+    "db_item_count": 2,
+    "delta_items": 2,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\26.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\31.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange101.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "CERVEJA ANTARCTICA ORIG C12X350ML ECO",
+        "codigo_produto": "7891991307338",
+        "quantidade": "1",
+        "valor_unit": "48,9",
+        "valor_total": "48,90",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651120002633041625171458",
+    "data_emissao": "28/02/2026 14:31:37",
+    "html_item_count": 6,
+    "db_item_count": 5,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\29.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange11.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "*PR* BISC GULLON MEGA DUO CHOC P PROMOCAO",
+        "codigo_produto": "8410376017113",
+        "quantidade": "1",
+        "valor_unit": "17,9",
+        "valor_total": "17,90",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651130003328229175012375",
+    "data_emissao": "05/02/2026 21:14:58",
+    "html_item_count": 34,
+    "db_item_count": 20,
+    "delta_items": 14,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\4.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange1.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "BEB CRYSTAL FRUTAS VERMELHAS CGAS 510",
+        "codigo_produto": "7894900521504",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 6,
+        "html_count": 6,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA SAB AGUA DA PEDRA ABAHOR CG 350M",
+        "codigo_produto": "7896436103285",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 5,
+        "html_count": 5,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA SAB AGUA DA PEDRA F VERM CG 350M",
+        "codigo_produto": "7896436103308",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "MACARRAO NISSIN INST T MONICA TOMATE",
+        "codigo_produto": "7891079001028",
+        "quantidade": "1",
+        "valor_unit": "2,95",
+        "valor_total": "2,95",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "OVO BRANCO KING JUMBO C10",
+        "codigo_produto": "7898019061210",
+        "quantidade": "1",
+        "valor_unit": "5,99",
+        "valor_total": "5,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651130003328209388955272",
+    "data_emissao": "05/02/2026 21:06:47",
+    "html_item_count": 4,
+    "db_item_count": 3,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\5.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange2.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "CERVEJA ANTARCTICA ORIG C12X350ML ECO",
+        "codigo_produto": "7891991307338",
+        "quantidade": "1",
+        "valor_unit": "48,9",
+        "valor_total": "48,90",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260283646984004369651110003259791253637501",
+    "data_emissao": "14/02/2026 15:31:25",
+    "html_item_count": 9,
+    "db_item_count": 4,
+    "delta_items": 5,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\fev\\ange5.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "CERVEJA BUDWEISER LT 350ML PROMOCAO",
+        "codigo_produto": "7891991010481",
+        "quantidade": "9",
+        "valor_unit": "3,79",
+        "valor_total": "34,11",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "CERVEJA BUDWEISER LT 350ML PROMOCAO",
+        "codigo_produto": "7891991010481",
+        "quantidade": "3",
+        "valor_unit": "3,78",
+        "valor_total": "11,34",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "CERVEJA ANTARCTICA ORIG C12 PROMOCAO",
+        "codigo_produto": "7891991307338",
+        "quantidade": "1",
+        "valor_unit": "46,68",
+        "valor_total": "46,68",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260178116670000750650220006230421009183601",
+    "data_emissao": "14/01/2026 10:32:29",
+    "html_item_count": 15,
+    "db_item_count": 14,
+    "delta_items": 1,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\11.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "TOMATE SWEET K",
+        "codigo_produto": "15190340",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260183646984004369651120002586581736165262",
+    "data_emissao": "17/01/2026 12:37:12",
+    "html_item_count": 26,
+    "db_item_count": 11,
+    "delta_items": 15,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\15.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "AGUA SAB AGUA DA PEDRA ABAHOR CG 350M",
+        "codigo_produto": "7896436103285",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 5,
+        "html_count": 5,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL LIMAO CGAS 510ML",
+        "codigo_produto": "7894900520507",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 4,
+        "html_count": 4,
+        "db_count": 0
+      },
+      {
+        "produto": "*PR* TOMATE LA CAMPAGNOLA SPELE PROMOCAO",
+        "codigo_produto": "7793360000089",
+        "quantidade": "1",
+        "valor_unit": "5,99",
+        "valor_total": "5,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA SAB AGUA DA PEDRA F VERM CG 350M",
+        "codigo_produto": "7896436103308",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "CHOC MILKA ALPINE MILK BR 90G",
+        "codigo_produto": "7622202271571",
+        "quantidade": "1",
+        "valor_unit": "10,99",
+        "valor_total": "10,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA MINERAL AGUA PURA SGAS PET 5L",
+        "codigo_produto": "7896468800091",
+        "quantidade": "1",
+        "valor_unit": "7,15",
+        "valor_total": "7,15",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "BISC MILKA CHOCO STICKS PCT 112G",
+        "codigo_produto": "7622210406354",
+        "quantidade": "1",
+        "valor_unit": "16,89",
+        "valor_total": "16,89",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260178116670000750650460008367091004402405",
+    "data_emissao": "27/01/2026 18:04:59",
+    "html_item_count": 9,
+    "db_item_count": 6,
+    "delta_items": 3,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\19.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "BEB CRYSTAL SP",
+        "codigo_produto": "16608020",
+        "quantidade": "1",
+        "valor_unit": "3,49",
+        "valor_total": "3,49",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "SCHWEPP TON ZE",
+        "codigo_produto": "10895950",
+        "quantidade": "1",
+        "valor_unit": "3,59",
+        "valor_total": "3,59",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "SCHWEPPES TONI",
+        "codigo_produto": "1002180",
+        "quantidade": "1",
+        "valor_unit": "3,59",
+        "valor_total": "3,59",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260178116670000750650210008791491000139937",
+    "data_emissao": "03/01/2026 13:23:50",
+    "html_item_count": 14,
+    "db_item_count": 12,
+    "delta_items": 2,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\jan\\5.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "LICHIA BANDEJA",
+        "codigo_produto": "14786640",
+        "quantidade": "1",
+        "valor_unit": "12,99",
+        "valor_total": "12,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "SCHWEPP TON ZE",
+        "codigo_produto": "10895950",
+        "quantidade": "1",
+        "valor_unit": "3,59",
+        "valor_total": "3,59",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260383646984004369651130003381021998497560",
+    "data_emissao": "15/03/2026 18:57:07",
+    "html_item_count": 25,
+    "db_item_count": 21,
+    "delta_items": 4,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\10.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\Imprimir DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA_3.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "*PRO CHOC MILKA ALPINE MILK BR 9 PROMOCAO",
+        "codigo_produto": "7622202271571",
+        "quantidade": "1",
+        "valor_unit": "15,9",
+        "valor_total": "15,90",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL LIMAO CGAS 510ML",
+        "codigo_produto": "7894900520507",
+        "quantidade": "1",
+        "valor_unit": "2,99",
+        "valor_total": "2,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "LASANHA SADIA BOLONHESA CX 350G",
+        "codigo_produto": "7893000674233",
+        "quantidade": "1",
+        "valor_unit": "11,89",
+        "valor_total": "11,89",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260378116670000750650290007682391003080603",
+    "data_emissao": "22/03/2026 13:11:58",
+    "html_item_count": 18,
+    "db_item_count": 11,
+    "delta_items": 7,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670000750650290007682391003080603.html",
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "BEB CRYSTAL SP",
+        "codigo_produto": "17113180",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 4,
+        "html_count": 4,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL SP",
+        "codigo_produto": "16608020",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      },
+      {
+        "produto": "BEB CRYSTAL SP",
+        "codigo_produto": "16971100",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260378116670001307650240000900401009318027",
+    "data_emissao": "12/03/2026 11:02:25",
+    "html_item_count": 6,
+    "db_item_count": 4,
+    "delta_items": 2,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\41260378116670001307650240000900401009318027.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "AZ.MAMMA BIA 0",
+        "codigo_produto": "16712350",
+        "quantidade": "1",
+        "valor_unit": "49,9",
+        "valor_total": "49,90",
+        "missing_count": 3,
+        "html_count": 3,
+        "db_count": 0
+      }
+    ]
+  },
+  {
+    "id_nota": "41260383646984004369651150003001261364818948",
+    "data_emissao": "27/03/2026 20:59:14",
+    "html_item_count": 25,
+    "db_item_count": 12,
+    "delta_items": 13,
+    "source_paths": [
+      "C:\\Users\\alexr\\roma9-data-platform\\data\\Notas Fiscais\\2026\\mar\\DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA_2.html"
+    ],
+    "missing_items": [
+      {
+        "produto": "BOMBOM LACTA FAVORITOS CX 2 PROMOCAO",
+        "codigo_produto": "7622210596413",
+        "quantidade": "1",
+        "valor_unit": "12,99",
+        "valor_total": "12,99",
+        "missing_count": 6,
+        "html_count": 6,
+        "db_count": 0
+      },
+      {
+        "produto": "AGUA TONICA SCHWEPPES ZACUCAR LT 220M",
+        "codigo_produto": "7894900360394",
+        "quantidade": "1",
+        "valor_unit": "2,89",
+        "valor_total": "2,89",
+        "missing_count": 4,
+        "html_count": 4,
+        "db_count": 0
+      },
+      {
+        "produto": "REFRIG SPRITE LEMON FRESH PET 510ML",
+        "codigo_produto": "7894900680508",
+        "quantidade": "1",
+        "valor_unit": "3,99",
+        "valor_total": "3,99",
+        "missing_count": 4,
+        "html_count": 4,
+        "db_count": 0
+      },
+      {
+        "produto": "*PRO QUEIJO PRESIDENT PRATO GRAN PROMOCAO",
+        "codigo_produto": "7891097104701",
+        "quantidade": "1",
+        "valor_unit": "9,99",
+        "valor_total": "9,99",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      },
+      {
+        "produto": "LIMP SANIT PATO MARINE TABL PROMOCAO",
+        "codigo_produto": "7894650015803",
+        "quantidade": "1",
+        "valor_unit": "9,9",
+        "valor_total": "9,90",
+        "missing_count": 2,
+        "html_count": 2,
+        "db_count": 0
+      }
+    ]
+  }
+]

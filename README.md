@@ -82,6 +82,38 @@ If you are visiting this repository for the first time, the recommended reading 
 - Improve data quality, documentation, and testing
 - Explore advanced analytical use cases (NSA, NLP, LLMs) grounded in the platform
 
+## Monthly Maintenance Workflow
+
+For ongoing data ingestion and product categorization:
+
+### 1. Load New Invoice Data
+```bash
+python scripts/misc/nf_data_load_html.py
+```
+
+### 2. Check for Unmapped Products
+```bash
+python scripts/misc/manutencao_produtos.py
+```
+
+### 3. Update Product Mappings (if needed)
+- **Option A - Interactive CRUD (Recommended)**:
+  ```bash
+  python scripts/misc/crud_produtos.py
+  ```
+  Use the interactive menu to add/edit products and categories
+
+- **Option B - Manual SQL Edit**:
+  - Edit `scripts/misc/DIM_produtos.sql` to add new canonical products and mappings
+  - Apply changes to database
+
+### 4. Validate Coverage
+```bash
+python scripts/misc/manutencao_produtos.py
+```
+
+See `scripts/misc/README_manutencao.md` for detailed maintenance procedures.
+
 ## Repository structure
 
 ```text

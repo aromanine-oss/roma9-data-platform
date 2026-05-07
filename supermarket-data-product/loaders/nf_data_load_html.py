@@ -682,6 +682,12 @@ def extract_nfce_totals(soup):
     vlr_desconto = extract_total_value_by_label(soup, ["Descontos R$"])
     vlr_pago = extract_total_value_by_label(soup, ["Valor a pagar R$"])
 
+    if vlr_total is None:
+        vlr_total = vlr_pago
+
+    if vlr_desconto is None:
+        vlr_desconto = Decimal("0.00")
+
     return vlr_total, vlr_desconto, vlr_pago
 
 

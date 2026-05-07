@@ -1,4 +1,5 @@
 from difflib import SequenceMatcher
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 import os
 import re
@@ -82,6 +83,22 @@ def validate_data_emissao(header, html_path: Path):
         print(f"data_emissao nao extraida para {html_path}")
         return False
     return True
+
+
+def parse_money(value):
+    if not value:
+        return None
+
+    value = re.sub(r"[^\d,.-]", "", value.strip())
+    if not value:
+        return None
+
+    value = value.replace(".", "").replace(",", ".")
+
+    try:
+        return Decimal(value)
+    except InvalidOperation:
+        return None
 
 
 def normalize_text(value):
@@ -193,7 +210,10 @@ def best_fuzzy_match(produto, product_cache):
 
 def extract_html_data(html_path: Path):
     header = extract_header(html_path)
-    chave, _, _, data_emissao, estabelecimento, cnpj = header
+    chave = header[0]
+    data_emissao = header[3]
+    estabelecimento = header[4]
+    cnpj = header[5]
 
     itens = []
 
@@ -321,8 +341,18 @@ def create_header_table(cursor):
             serie TEXT,
             data_emissao TEXT,
             estabelecimento TEXT,
-            cnpj TEXT
+            cnpj TEXT,
+            vlr_total NUMERIC(12,2),
+            vlr_desconto NUMERIC(12,2),
+            vlr_pago NUMERIC(12,2)
         );
+    """)
+
+    cursor.execute(f"""
+        ALTER TABLE {PG_SCHEMA}.{HEADER_TABLE_NAME}
+            ADD COLUMN IF NOT EXISTS vlr_total NUMERIC(12,2),
+            ADD COLUMN IF NOT EXISTS vlr_desconto NUMERIC(12,2),
+            ADD COLUMN IF NOT EXISTS vlr_pago NUMERIC(12,2);
     """)
 
     cursor.execute(f"""
@@ -627,6 +657,34 @@ def insert_items(cursor, itens):
     cursor.executemany(query, rows)
 
 
+def normalize_label(text):
+    return normalize_text(text).replace(":", "")
+
+
+def extract_total_value_by_label(soup, labels):
+    wanted_labels = {normalize_label(label) for label in labels}
+
+    for row in soup.select("#totalNota #linhaTotal"):
+        label_node = row.find("label")
+        value_node = row.find("span")
+        if not label_node or not value_node:
+            continue
+
+        label = normalize_label(label_node.get_text(" ", strip=True))
+        if label in wanted_labels:
+            return parse_money(value_node.get_text(" ", strip=True))
+
+    return None
+
+
+def extract_nfce_totals(soup):
+    vlr_total = extract_total_value_by_label(soup, ["Valor total R$"])
+    vlr_desconto = extract_total_value_by_label(soup, ["Descontos R$"])
+    vlr_pago = extract_total_value_by_label(soup, ["Valor a pagar R$"])
+
+    return vlr_total, vlr_desconto, vlr_pago
+
+
 def extract_header(html_path):
     with html_path.open("rb") as f:
         content = f.read()
@@ -688,13 +746,18 @@ def extract_header(html_path):
             if fallback_data_match:
                 data_emissao = fallback_data_match.group(1).strip()
 
+    vlr_total, vlr_desconto, vlr_pago = extract_nfce_totals(soup)
+
     return (
         chave,
         numero,
         serie,
         data_emissao,
         estabelecimento,
-        cnpj
+        cnpj,
+        vlr_total,
+        vlr_desconto,
+        vlr_pago,
     )
 
 
@@ -702,15 +765,18 @@ def insert_header(cursor, header):
     query = f"""
         INSERT INTO {PG_SCHEMA}.{HEADER_TABLE_NAME} (
             id_nota, numero, serie, data_emissao,
-            estabelecimento, cnpj
+            estabelecimento, cnpj, vlr_total, vlr_desconto, vlr_pago
         )
-        VALUES (%s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
         ON CONFLICT (id_nota) DO UPDATE SET
             numero = EXCLUDED.numero,
             serie = EXCLUDED.serie,
             data_emissao = EXCLUDED.data_emissao,
             estabelecimento = EXCLUDED.estabelecimento,
-            cnpj = EXCLUDED.cnpj;
+            cnpj = EXCLUDED.cnpj,
+            vlr_total = EXCLUDED.vlr_total,
+            vlr_desconto = EXCLUDED.vlr_desconto,
+            vlr_pago = EXCLUDED.vlr_pago;
     """
     cursor.execute(query, header)
 

@@ -56,6 +56,41 @@ def extract_label_map(container):
     return values
 
 
+def extract_payment_total(soup):
+    total = None
+    cobranca = soup.select_one("#Cobranca")
+    if not cobranca:
+        return None
+
+    for payment_row in cobranca.select("table.toggle tr"):
+        cells = payment_row.select("td")
+        if not cells:
+            continue
+
+        value = shared.parse_money(cells[-1].get_text(" ", strip=True))
+        if value is None:
+            continue
+
+        total = value if total is None else total + value
+
+    return total
+
+
+def extract_totals(soup):
+    totais = extract_label_map(soup.select_one("#Totais"))
+    dados_nfe = extract_label_map(soup.select_one("#NFe fieldset"))
+
+    vlr_total = shared.parse_money(
+        totais.get("VALOR TOTAL DA NFE")
+        or totais.get("VALOR TOTAL DOS PRODUTOS")
+        or dados_nfe.get("VALOR TOTAL DA NOTA FISCAL")
+    )
+    vlr_desconto = shared.parse_money(totais.get("VALOR TOTAL DOS DESCONTOS"))
+    vlr_pago = extract_payment_total(soup) or vlr_total
+
+    return vlr_total, vlr_desconto, vlr_pago
+
+
 def extract_header(header_path: Path):
     soup = parse_html(header_path)
 
@@ -73,6 +108,8 @@ def extract_header(header_path: Path):
     if not chave:
         raise ValueError(f"Header chave not found in {header_path}")
 
+    vlr_total, vlr_desconto, vlr_pago = extract_totals(soup)
+
     return (
         chave,
         numero,
@@ -80,12 +117,18 @@ def extract_header(header_path: Path):
         data_emissao,
         estabelecimento,
         cnpj,
+        vlr_total,
+        vlr_desconto,
+        vlr_pago,
     )
 
 
 def extract_items(item_path: Path, header):
     soup = parse_html(item_path)
-    chave, _, _, data_emissao, estabelecimento, cnpj = header
+    chave = header[0]
+    data_emissao = header[3]
+    estabelecimento = header[4]
+    cnpj = header[5]
 
     itens = []
     product_section = soup.select_one("#Prod")

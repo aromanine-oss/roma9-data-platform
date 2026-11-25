@@ -16,7 +16,7 @@ load_dotenv()
 # ==================================================
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-DATA_DIR = BASE_DIR / "data" / "Notas Fiscais" / "2026" / "abr"
+DATA_DIR = BASE_DIR / "data" / "Notas Fiscais" / "2026" / "nov"
 
 PG_CONN = {
     "host": os.getenv("DB_HOST"),
@@ -117,7 +117,12 @@ def simplify_product_text(value):
         return ""
 
     # Remove ruídos comuns de descrição fiscal para aproximar do nome canônico.
+    value = re.sub(r"\bCHOC\b", "CHOCOLATE", value)
+
     noise_patterns = [
+        r"\bPE DE MOLEQUE\b",
+        r"\bDARK\b",
+        r"\bBR\b",
         r"\bPROMOCAO\b",
         r"\bPROM\b",
         r"\bOFERTA\b",
@@ -888,3 +893,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

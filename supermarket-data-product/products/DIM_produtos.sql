@@ -147,6 +147,7 @@ INSERT INTO analytics.dim_produto (nome_canonico, categoria_id) VALUES
     ('Bombom Nestlé',               8),
     ('Bombom Sonho de Valsa',       8),
     ('Chocolate Milka',             8),
+    ('Chocolate Snickers',          8),
     ('Ovo de Chocolate Amargo',     8),
     ('Tâmaras com Chocolate',       8),
 
